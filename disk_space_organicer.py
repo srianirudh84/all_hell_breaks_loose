@@ -1,6 +1,11 @@
 #!/usr/bin/python
 #Author : Anirudh Srinivasan
-
+__author__ = "Anirudh Srinivasan "
+__copyright__ = "Copyright 2015"
+__version__ = "1.0"
+__maintainer__ = "Anirudh Srinivasan"
+__email__ = "srianirudh@gmail.com"
+__status__ = "Production"
 
 from os import path, stat, walk, getcwd
 from time import time, strftime, localtime
