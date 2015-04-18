@@ -56,14 +56,6 @@ def upload_archive:()
             except OSError:
                 pass
 
-#print "=========================" *len(str(opts.days)) + "===================="
-#b = []
-#for i in sizelist:
-#        b.append(parse_size(i))
-#print "You have uploaded a total of %s by cleaning up the above files." %format_size(sum(b))
-#print "=========================" *len(str(opts.days)) + "===================="
-
-
 def vault_inventory_jobid():
     glacier_layer1 = Layer1(aws_access_key_id='Type your AWS access ID', aws_secret_access_key='Type your AWS secret access key',region_name='Pick a region to upload')
     # http://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html
