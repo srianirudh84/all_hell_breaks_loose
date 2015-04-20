@@ -12,8 +12,8 @@ import readline
 #def anirudh():
 #        env.user = "anirudh"
 #        env.password = "type password here"
-#        env.hosts = ['anirudh.dev.eng.nutanix.com']
-#env.hosts = ['jita14.eng.nutanix.com']
+#        env.hosts = ['type hostname here']
+#env.hosts = ['type hostname here']
 env.user = "it"
 env.password = "type password here"
 
