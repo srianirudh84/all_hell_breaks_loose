@@ -92,4 +92,4 @@ if __name__ == '__main__':
    if out['JobList'][0]['Completed'] == True:
       out_get_job_output()
    else:
-      print "The job is not currently available for download."
+      print "The job is not currently available"
