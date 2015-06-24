@@ -30,7 +30,7 @@ def rsyn_cmd():
 	f4 = call(RSYNC_CMD)
 
 if __name__ == '__main__':
-    	logging.basicConfig(filename='/tmp/pull_and_deploy.log',level=logging.DEBUG)
+	logging.basicConfig(filename ='/tmp/pull_and_deploy.log',level =logging.DEBUG, datefmt ='%m/%d/%Y %I:%M:%S %p', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 	see_remote_commit_ids()
     	a = raw_input("Please pick a commit ID: ")
  	git_pull()
