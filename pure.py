@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#Author : anirudh@nutanix.com
+#Author : anirudh
 
 import random
 import string
@@ -8,7 +8,7 @@ import sys
 import os
 
 user = sys.argv[1]
-receivers = ["it-systems-team@nutanix.com"]
+receivers = [""]
 
 def genrandpwd():
        	return  ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.digits + string.ascii_uppercase + string.punctuation) for _ in range(30))
@@ -21,11 +21,11 @@ def change_pure_passwd(user, password):
        	p.close()
 
 def mailpwd(user, password):
-       	sender = "root@ftp.nutanix.com"
+       	sender = "root@hostname"
        	subj = "!!!IMPORTANT!!!, Password changed for user %s" %user
        	text = "The password for the %s user has changed, the new password is: \n\n %s" %(user, password)
        	message = message = 'Subject: %s\n\n%s' % (subj, text)
-       	smtpObj = smtplib.SMTP('mailrelay.corp.nutanix.com')
+       	smtpObj = smtplib.SMTP('')
        	smtpObj.sendmail(sender, receivers, message)
        	smtpObj.quit()
 
