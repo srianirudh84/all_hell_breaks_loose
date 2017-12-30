@@ -9,7 +9,7 @@ from subprocess import call
 import socket
 
 user = sys.argv[1]
-receivers = ["%s@nutanix.com" %user]
+receivers = ["%s@xyz.com" %user]
 
 def genrandpwd():
         return  ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.digits + string.ascii_uppercase + string.punctuation) for _ in range(30))
@@ -29,7 +29,7 @@ def mailpwd(user, password):
         subj = "!!!IMPORTANT!!!, Unix password changed for user %s" %user
         text = "The password for the %s user has changed, the new password is:\n\n %s \n\n Note: The system will force to change the password upon initial login. Please use the password provided in the mail as your current password and type the password of your choice as the New password" %(user, password)
         message = message = 'Subject: %s\n\n%s' % (subj, text)
-        smtpObj = smtplib.SMTP('mailrelay.corp.nutanix.com')
+        smtpObj = smtplib.SMTP('')
         smtpObj.sendmail(sender, receivers, message)
         smtpObj.quit()
 
