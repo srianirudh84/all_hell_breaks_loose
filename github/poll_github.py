@@ -106,9 +106,7 @@ if __name__ == '__main__':
     get_pr=params.get_pr
     pr_num=params.pr_num
     get_logger().info("User Input to script repo : {}, label: {}, author: {}, query: {}, token: {}, get_pr: {}, pr_num: {}".format(repo, label, author, query, token, get_pr, pr_num))
-    #a=PollGithub(repo="infacloud/ct-k8-gitops", pr_label="kubeyard", author="infa-ctgitauto",query='intcloud-anitest-eks-qa-usw2')
     a=PollGithub(repo=repo, pr_label=label, author=author,query=query, token=token)
-    #a=PollGithub(repo="infacloud/netblocks_workflow", pr_label="dependencies ", author="infa-netopsbot ",query='HAWK-VPC-1639762644')
     if get_pr:
         print (a.get_pr_no())
     else:
