@@ -10,7 +10,7 @@ from requests.models import Response
 
 def get_logger(name=None):
     if name==None:
-        name = "payload_generator"
+        name = "poll_github"
     logging.basicConfig(stream=sys.stdout, level='INFO',format="[%(asctime)s] %(levelname)s [%(threadName)s] [%(filename)s:%(funcName)s:%(lineno)s] %(message)s",
                             datefmt='%Y-%m-%dT%H:%M:%S')
     logger = logging.getLogger(name)
